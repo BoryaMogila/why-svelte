@@ -63,6 +63,10 @@
 					</section>
 				</section>
 				<section>
+					<img src="images/svelte-interest.png" />
+					<div><a href="https://2019.stateofjs.com/front-end-frameworks/">The State of JavaScript 2019</a></div>
+				</section>
+				<section>
 					<pre>
 						<code>
 	<script>
@@ -80,27 +84,200 @@
 					</pre>
 				</section>
 				<section>
-					<img src="images/svelte-interest.png" />
-					<div><a href="https://2019.stateofjs.com/front-end-frameworks/">The State of JavaScript 2019</a></div>
-				</section>
-				<section>
-					<h4>Що мені подобається в Svelte?</h4>
-					<img src="images/Like.jpg" />
-				</section>
-				<section>
-					<h4>Мінімальне run-time ядро</h4>
-					<div>
-						<img src="images/run-time.png" width="350" />
-					</div>
-					<a href="https://youtu.be/CilgQdsiTkY" target="_blank">https://youtu.be/CilgQdsiTkY</a>
+					<h4>Підхід</h4>
+					<img src="images/compiles.png" />
 				</section>
 				<section>
 					<h4>Стадії схуднення фроненда</h4>
 					<img src="images/fat.jpg" />
 				</section>
 				<section>
-					<h4>Підхід</h4>
-					<img src="images/compiles.png" />
+					<h4>js framework benchmark</h4>
+					<div>
+						<img src="images/js-benchmark.png" />
+					</div>
+					<a href="https://bit.ly/3e3ggL1" target="_blank">bit.ly/3e3ggL1</a>
+				</section>
+				<section>
+					<div>
+						<img src="images/RW.png"  width="600"/>
+					</div>
+					<a href="https://bit.ly/2WMgDnm" target="_blank">bit.ly/2WMgDnm</a>
+				</section>
+				<section>
+					<h4>Мінімальне run-time ядро</h4>
+					<div>
+						<img src="images/run-time.png" width="350" />
+					</div>
+					<a href="https://youtu.be/CilgQdsiTkY" target="_blank">youtu.be/CilgQdsiTkY</a>
+				</section>
+				<section>
+					<h4>Стадії компіляції Svelte</h4>
+					<ul>
+						<li>Парсінг коду в AST</li>
+						<li>Відстеження посилань та залежностей</li>
+						<li>Створення блоків і фрагментів коду</li>
+						<li>Генерація коду</li>
+					</ul>
+				</section>
+				<section>
+					<div>
+						<img src="images/Generate.png" />
+					</div>
+					<a href="https://bit.ly/3cQutea" target="_blank">bit.ly/3cQutea</a>
+				</section>
+				<section>
+					<p>Compile Svelte in your head (Part 1)</p>
+					<a href="https://bit.ly/36iHYRo" target="_blank">bit.ly/36iHYRo</a>
+					<p>Compile Svelte in your head (Part 2)</p>
+					<a href="https://bit.ly/3cOMQQN" target="_blank">bit.ly/3cOMQQN</a>
+					<p>Compile Svelte in your head (Part 3)</p>
+					<a href="https://bit.ly/2AKzt5P" target="_blank">bit.ly/2AKzt5P</a>
+				</section>
+				<section>
+					<h4>Реактивність</h4>
+					<img src="images/reactivity.png" width="400" />
+				</section>
+				<section>
+					<h4>Менеджмент данних</h4>
+					<img src="./images/data-flow.png" width="500">
+				</section>
+				<section>
+					<h4>props</h4>
+					<pre>
+						<code>
+	export let myProp = '';
+						</code>
+					</pre>
+				</section>
+				<section>
+					<h4>Контекст</h4>
+					<pre>
+						<code>
+	import { setContext, getContext } from 'svelte';
+						</code>
+					</pre>
+				</section>
+				<section>
+					<h4>stores</h4>
+					<pre>
+						<code>
+	import {
+		writable,
+		readable,
+		derived
+	} from 'svelte/store';
+						</code>
+					</pre>
+				</section>
+				<section>
+					<h4>Цікаві реалізації</h4>
+					<p>Svelte-asyncable</p>
+					<a href="https://bit.ly/2LS2yyF" target="_blank">bit.ly/2LS2yyF</a>
+					<p>Svelte Pipeable Store</p>
+					<a href="https://bit.ly/3bWFyZM" target="_blank">bit.ly/3bWFyZM</a>
+				</section>
+				<section>
+					<h4>Плюшки для роботи з формами з формами</h4>
+					<ul>
+						<li>
+							Двостороннє зв'зування даних
+						</li>
+						<li>Можливість керувати окремими полями за допомогою <b>writable</b> сторів</li>
+						<li>Агрегація даних за допомогою <b>derived</b> сторів</li>
+						<li>Можливість створювати кастомні стори за рахунок контракту</li>
+					</ul>
+				</section>
+				<section>
+					<p>Demo</p>
+					<a href="https://bit.ly/3e33Gvg" target="_blank">bit.ly/3e33Gvg</a>
+				</section>
+				<section>
+					<p>svelte-forms-lib</p>
+					<a href="https://bit.ly/2AK6A9Q" target="_blank">bit.ly/2AK6A9Q</a>
+					<p>svelidation</p>
+					<a href="https://bit.ly/2Ttdo22" target="_blank">bit.ly/2Ttdo22</a>
+				</section>
+				<section>
+					<h4>Робота з сторонніми бібліотеками</h4>
+					<pre>
+						<code>
+<script>
+ const library = (node) => {
+  // init library on node
+  return {
+	 destroy() { /* destroy library */ },
+	 update(props) { /* update library by props */ }
+  }
+ }
+</script>
+
+<div use:library={props}></div>
+						</code>
+					</pre>
+				</section>
+				<section>
+					<h4>Анімації</h4>
+					<iframe width="750" height="430"
+									src="https://intense-bayou-59978.herokuapp.com/crossfade"></iframe>
+				</section>
+				<section>
+					<h4>Svelte анімації</h4>
+					<img src="images/pb-talks.png" width="350" />
+					<div>
+						<a href="https://bit.ly/2vLy78Y" target="_blank">bit.ly/2vLy78Y</a>
+					</div>
+				</section>
+				<section>
+					<h4>Tree shaking з коробки</h4>
+				</section>
+				<section>
+					<h4>Sapper</h4>
+					<ul>
+						<li>
+							Роутинг
+						</li>
+						<li>
+							Code splitting
+						</li>
+						<li>
+							PWA з коробки
+						</li>
+						<li>
+							Prefetch сторінок
+						</li>
+						<li>
+							Декларативный опис метаданих
+						</li>
+						<li>
+							Вигрузка в статичний сайт
+						</li>
+						<li>
+							Cypress (тестування)
+						</li>
+						<li>
+							Дуже маленький розмір клієтського коду
+						</li>
+					</ul>
+				</section>
+				<section>
+					<p>Demo</p>
+					<a href="https://bit.ly/2XiQeNg" target="_blank">bit.ly/2XiQeNg</a>
+					<p>Source</p>
+					<a href="https://bit.ly/3bXFjOa" target="_blank">bit.ly/3bXFjOa</a>
+				</section>
+				<section>
+					<h4>Майбутне Sapper</h4>
+					<ul>
+						<li>
+							Мікс статичних сторінок і SSR
+						</li>
+						<li>
+							Інтернаціоналізація <a href="https://bit.ly/2ypx0x1" target="_blank">bit.ly/2ypx0x1</a>
+						</li>
+						<li>SPA режим</li>
+						<li>Єдиний підхід для аутентифікації</li>
+					</ul>
 				</section>
 				<section>
 					<h4>Легко почати розробляти</h4>
@@ -109,44 +286,6 @@
 				<section>
 					<h4>Документація</h4>
 					<img src="images/documentation.png" />
-				</section>
-				<section>
-					<section>
-						<h4>Інструменти</h4>
-						<img src="images/instruments.jpg" width="400" />
-					</section>
-					<section>
-						<h4>Реактивність</h4>
-						<img src="images/reactivity.png" width="400" />
-					</section>
-					<section>
-						<h4>Анімації</h4>
-						<iframe width="750" height="430"
-										src="https://intense-bayou-59978.herokuapp.com/crossfade"></iframe>
-					</section>
-					<section>
-						<h4>Svelte анімації</h4>
-						<img src="images/pb-talks.png" width="350" />
-						<div>
-							<a href="https://bit.ly/2vLy78Y" target="_blank">https://bit.ly/2vLy78Y</a>
-						</div>
-					</section>
-					<section>
-						<h4>Робота з даними</h4>
-						<ul>
-							<li>Двосторонній біндінг</li>
-							<li>Stores</li>
-						</ul>
-					</section>
-					<section>
-						<h4>Робота з сторонніми бібліотеками</h4>
-					</section>
-				</section>
-				<section>
-					<h4>Tree shaking з коробки</h4>
-				</section>
-				<section>
-					<h4>Самий швидкий SSR</h4>
 				</section>
 				<section>
 					<h4>
@@ -224,12 +363,26 @@
 						<h4>Подивитися</h4>
 						<ul>
 							<li>
+								Rich Harris (Rethinking reactivity)
+								<a href="https://youtu.be/AdNJ3fydeao" target="_blank">youtu.be/AdNJ3fydeao</a>
+							</li>
+							<li>
+								Rich Harris (The Return of 'Write Less, Do More')
+								<a href="https://youtu.be/BzX4aTRPzno" target="_blank">youtu.be/BzX4aTRPzno</a>
+							</li>
+
+							<li>
 								Павел Малышев (Svelte Cookbook)
 								<a href="https://www.youtube.com/watch?v=I5DIcbcXzfE" target="_blank">youtube.com/I5DIcbcXzfE</a>
 							</li>
 							<li>
 								Ілля Клімов (Три истории о Svelte)
 								<a href="https://youtu.be/0cFoEPhv2II" target="_blank">youtu.be/0cFoEPhv2II</a>
+							</li>
+							<li>
+								Svelte Society Day 2020
+								<br />
+								<a href="https://bit.ly/2XqJzke" target="_blank">bit.ly/2XqJzke</a>
 							</li>
 						</ul>
 					</section>
