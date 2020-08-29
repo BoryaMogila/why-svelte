@@ -24,7 +24,7 @@
 	</head>
 	<body>
 		<img style="
-		height: 30px;
+		height: 20px;
 		position: fixed;
 		left: 10px;
 		bottom: 26px;
@@ -32,20 +32,20 @@
 		<img style="
 		position: fixed;
 		left: 10px;
-		bottom: 66px;
-		height: 30px;
+		bottom: 56px;
+		height: 20px;
 		" src="images/dom.ria.png">
 		<img style="
-		height: 30px;
+		height: 20px;
 		position: fixed;
 		left: 10px;
-		bottom: 106px;
+		bottom: 86px;
 		" src="images/auto.ria.png">
 		<img style="
-		height: 30px;
+		height: 20px;
 		position: fixed;
 		left: 10px;
-		bottom: 146px;
+		bottom: 116px;
     	" src="images/ria.png">
 		<div class="reveal">
 			<div class="slides">
@@ -55,7 +55,7 @@
 					<br />
 					<br />
 					<br />
-					<div style="text-align: right; font-size: 14px">
+					<div style="text-align: right; font-size: 18px">
 						<b>Борис Могила</b>
 						<p>DOM.RIA (напрям “Новобудови України”)</p>
 					</div>
@@ -168,7 +168,21 @@
 				</section>
 				<section>
 					<h4>Реактивність</h4>
-					<img src="images/reactivity.png" width="400" />
+					<pre>
+						<code data-line-numbers="3,5,6,11">
+<script>
+  let speakers = ['Роман', 'Віктор', 'Олег']
+  function remove (name) {
+	speakers = speakers
+		.filter(speaker => speaker === name)
+  }
+</script>
+{#each speakers as speaker}
+  <p>{speaker}</p>
+    <button on:click="() => remove(speaker)">x</button>
+{/each}
+						</code>
+					</pre>
 				</section>
 				<section>
 					<h4>Менеджмент данних</h4>
